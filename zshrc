@@ -109,3 +109,5 @@ alias l="ls -l"
 alias c="clear"
 alias d='dirs -v | head -10'
 alias tmux="tmux -2"
+
+source $ZSH_CUSTOM/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
