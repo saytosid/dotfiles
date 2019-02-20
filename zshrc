@@ -2,13 +2,16 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/saytosid/.oh-my-zsh"
+  export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="af-magic"
+
+# Vi mode
+bindkey -v
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -55,7 +58,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=~/dotfiles/oh-my-zsh-custom
+ZSH_CUSTOM=$HOME/dotfiles/oh-my-zsh-custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -66,13 +69,13 @@ plugins=(
   git
   zsh-autosuggestions
   tmux
+  vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-eval "$(thefuck --alias)"
-export TERM=xterm-256color
+export TERM=screen-256color
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -104,6 +107,7 @@ function cd () {
     }
 alias l="ls -l"
 alias c="clear"
-
+alias d='dirs -v | head -10'
+alias tmux="tmux -2"
 
 source $ZSH_CUSTOM/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
