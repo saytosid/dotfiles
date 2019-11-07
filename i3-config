@@ -35,12 +35,12 @@ bindsym $mod+i exec google-chrome-stable
 
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10; exec pkill -SIGRTMIN+10 i3blocks # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10; exec pkill -SIGRTMIN+10 i3blocks # decrease screen brightness
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5%; exec pkill -SIGRTMIN+10 i3blocks #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%; exec pkill -SIGRTMIN+10 i3blocks #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 
@@ -167,5 +167,6 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   font pango:mono 10
-  status_command i3blocks -c ~/.i3blocks.conf
+  status_command i3blocks
+  position top
 }
