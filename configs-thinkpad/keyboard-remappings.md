@@ -28,5 +28,5 @@ xkb_symbols "remote" {
 
 - `setxkbmap -device <device id> -layout "pc+us+inet(evdev)+custom"`
 
-- Add to startup script (or create one in /etc/init.d/)
+- Add to ~/.profile (10==<device_id>)
 `setxkbmap -device 10  -layout "pc+us+inet(evdev)+custom"`
