@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Add to /etc/init.d/
+# Register it using `sudo update-rc.d saytosid-startup defaults`
+
+# Keyboard layout remappings
+setxkbmap -device 10  -layout "pc+us+inet(evdev)+custom"
+
+# Touchpad natural scrolling
+xinput --set-prop 11 "libinput Natural Scrolling Enabled" 1
