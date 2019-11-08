@@ -106,7 +106,7 @@ label=🔆
 interval=once
 signal=10
 
-[volume-pactl]
+[volume-control]
 label=🔉
 command=amixer -c 1 -M -D pulse get Master | grep -o -E [[:digit:]]+%
 interval=once
