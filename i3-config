@@ -175,4 +175,14 @@ bar {
     status_command    python ~/.config/i3/i3pystatus.conf
     position          top
     workspace_buttons yes
-}
+    font pango:Hack, FontAwesome 10
+    colors {
+        background #253941
+        statusline #e7dfd9
+        separator  #081419
+        focused_workspace  #2aa198 #073642 #eee895
+        active_workspace   #073642 #859900 #839496
+        inactive_workspace #002b36  #002b36   #586e75
+        urgent_workspace   #cb4b16 #dc322f #fdf6e3
+    }
+  }
